@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -19,7 +20,8 @@ import { CartComponent } from './cart/cart.component';
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent},
       { path: 'cart', component: CartComponent },
-    ])
+    ]),
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
